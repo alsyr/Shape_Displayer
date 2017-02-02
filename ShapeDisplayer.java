@@ -5,19 +5,18 @@
  */
 
 /**
-   A program that allows users to edit a scene composed of items.
-*/
-public class ShapeDisplayer
-{
-   /**
-     A program that allows users to edit a scene composed of items.
-     @param args unused
+ * A program that allows users to edit a scene composed of items.
+ */
+public class ShapeDisplayer {
+  /**
+   * A program that allows users to edit a scene composed of items.
+   *
+   * @param args unused
    */
-   public static void main(String[] args)
-   {
-      ShapeFrame sceneFrame = new ShapeFrame();
-      sceneFrame.setVisible(true);
-   }
+  public static void main(String[] args) {
+    ShapeFrame sceneFrame = new ShapeFrame();
+    sceneFrame.setVisible(true);
+  }
 }
 
 

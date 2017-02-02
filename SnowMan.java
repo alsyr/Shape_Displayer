@@ -6,23 +6,22 @@
 
 import java.awt.geom.Ellipse2D;
 
+public class SnowMan extends CompositeShape {
 
-public class SnowMan extends CompositeShape{
-    
-/**
-      Constructs a snow man shape.
-      @param x the left of the bounding circle
-      @param y the top of the bounding circle
-      @param width the width of the bounding circle
+  /**
+   * Constructs a snow man shape.
+   *
+   * @param x     the left of the bounding circle
+   * @param y     the top of the bounding circle
+   * @param width the width of the bounding circle
    */
-   public SnowMan(int x, int y, int width)
-   {
-      Ellipse2D.Double topBody
-         = new Ellipse2D.Double(x, y, width, width);
-      Ellipse2D.Double bottomBody
-         = new Ellipse2D.Double(x, y+width, width, width);
+  public SnowMan(int x, int y, int width) {
+    Ellipse2D.Double topBody
+        = new Ellipse2D.Double(x, y, width, width);
+    Ellipse2D.Double bottomBody
+        = new Ellipse2D.Double(x, y + width, width, width);
 
-      add(topBody);
-      add(bottomBody);
-   }
+    add(topBody);
+    add(bottomBody);
+  }
 }

@@ -8,43 +8,35 @@ import java.awt.*;
 import java.awt.geom.*;
 
 /**
-   A scene shape that is composed of multiple geometric shapes.
-*/
-public abstract class CompositeShape
-{
-   private GeneralPath path;
-   private int width;
-       
-   public int getWidth()
-   {
-      return width;
-   }
+ * A scene shape that is composed of multiple geometric shapes.
+ */
+public abstract class CompositeShape {
+  private GeneralPath path;
+  private int width;
 
-   public int getHeight()
-   {
-      return width/2;
-   }
-   
-   public CompositeShape()
-   {
-      path = new GeneralPath();
-   }
+  public int getWidth() {
+    return width;
+  }
 
-   protected void add(Shape s)
-   {
-      path.append(s, false);
-   }
+  public int getHeight() {
+    return width / 2;
+  }
 
-   public boolean contains(Point2D aPoint)
-   {
-      return path.contains(aPoint);
-   }
+  public CompositeShape() {
+    path = new GeneralPath();
+  }
 
-   public void draw(Graphics2D g2)
-   {
-      g2.draw(path);
-   }
+  protected void add(Shape s) {
+    path.append(s, false);
+  }
 
+  public boolean contains(Point2D aPoint) {
+    return path.contains(aPoint);
+  }
+
+  public void draw(Graphics2D g2) {
+    g2.draw(path);
+  }
 }
 
 
